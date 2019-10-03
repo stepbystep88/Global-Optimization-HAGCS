@@ -6,7 +6,9 @@ A new global optimization algorithm developed by using gradient infromation, mul
 **HAGCS** is desgined for the objective functions whose gradient is readily available. Essentially, the **HAGCS** algorithm is based on the Cuckoo search [CS, 1] algorithm.
 
 ## Installation
-addpath(genpath("./WZDOM"));
+Download the required libraries: git clone https://github.com/stepbystep88/WZDOM
+
+Set path: addpath(genpath("./WZDOM"));
 
 ## Test
 
