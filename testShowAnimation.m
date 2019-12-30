@@ -40,21 +40,21 @@ benchmarks = {
 %     @bsRosenbrock, 'Rosenbrock', @(dim)(ones(dim, 1)), @(dim)(0), [-10 10], dimensions, true;
 %     {@bsStochasticRosenbrock, @(dim)(abs(rand(dim, 1)) + 0.5)}, 'Stochastic Rosenbrock', @(dim)(ones(dim, 1)), @(dim)(0), [-100 100], dimensions, true;
 %     {@bsXinSheYang, @(dim)(abs(rand(dim, 1)))}, 'Xin-She Yang', @(dim)(zeros(dim, 1)), @(dim)(0), [-100 100], dimensions, false;
-%     @bsAckley, 'Ackley', @(dim)(zeros(dim, 1)), @(dim)(0), [-20 20], dimensions, false;
+    @bsAckley, 'Ackley', @(dim)(zeros(dim, 1)), @(dim)(0), [-20 20], dimensions, false;
 %     @bsGriewank, 'Griewank', @(dim)(zeros(dim, 1)), @(dim)(0), [-50 50], dimensions, false;
 %     @bsRastrigin, 'Rastrigin', @(dim)(zeros(dim, 1)), @(dim)(0), [-10 10], dimensions, false; 
 %     {@bsShiftedRastrigin, @(dim)(rand(dim, 1)-0.5)*50}, 'Shifted Rastrigin', @(dim)(zeros(dim, 1)), @(dim)(0), [-100 100], dimensions, false;
-    @bsSchwefel, 'Schwefel', @(dim)(420.9687*ones(dim, 1)), @(dim)(0), [-500 500], dimensions, false;
+%     @bsSchwefel, 'Schwefel', @(dim)(420.9687*ones(dim, 1)), @(dim)(0), [-500 500], dimensions, false;
 %     {@bsCFRosenbrock, @(dim)([abs(rand(2, 1)+0.1); abs(rand(dim, 1)) + 0.5])}, 'CF1', @(dim)(ones(dim, 1)), @(dim)(0), [-100 100], dimensions, false;
 %     {@bsCFComplex, @(dim)([abs(rand(5, 1)+0.1); abs(rand(dim, 1))])}, 'CF1', @(dim)(ones(dim, 1)), @(dim)(0), [-100 100], dimensions, false;
 
 %     @bsPeak, "MATLAB Peak", @(dim)([0.2283; -1.6255]), @(dim)(-6.551133332835842), [-3 3], dimensions, false;
-%     @bsDropWave, "Drop Wave", @(dim)([0; 0]), @(dim)(-1), [-20 20], dimensions, false;
+%     @bsDropWave, "Drop Wave", @(dim)([0; 0]), @(dim)(-1), [-5 5], dimensions, false;
 %     @bsMichalewicz, "Michalewicz", @(dim)([2.20290552014618;1.57079632677565]), @(dim)(-1.80130341009855321), [0 4], dimensions, false;
 %     @bsSquare, "Quadratic Curve", @(dim)([0; 0]), @(dim)(0), [-2 2], dimensions, false;
 };
 
-initNest = 25;
+initNest = 5;
 
 % test methods, you can only compare two methods at one time
 testMethods = {

@@ -28,7 +28,7 @@ for iMethod = 1 : nTestMethods
     % plot the base contour map
     range = benchmarks{iBenchmark, 5};
 
-    x = linspace(range(1), range(2), 200);
+    x = linspace(range(1), range(2), 500);
     y = x;
     nx = length(x);
     ny = nx;
@@ -59,7 +59,7 @@ for iMethod = 1 : nTestMethods
     ylabel('y');
     zlabel('z');
     title(sprintf('%s function', objFuncName));
-    bsPlotSetDefault(bsGetDefaultPlotSet());
+    bsSetDefaultPlotSet(bsGetDefaultPlotSet());
     set(gca, 'view', [-22, 40]);
 %     set(gca, 'view', [185, 50]);
     infos{iMethod}.view = get(gca, 'view');
@@ -84,7 +84,7 @@ for iMethod = 1 : nTestMethods
     title(sprintf('%s with population=%d', testMethods{iMethod, 1}, nNest));
     % plot global minimum;
     plot(bestX(1), bestX(2), 'rp', 'linewidth', 4);
-    bsPlotSetDefault(bsGetDefaultPlotSet());
+    bsSetDefaultPlotSet(bsGetDefaultPlotSet());
     pls = [];
 
     %% obtain the range of the datas at each iteration
@@ -214,12 +214,12 @@ for i = 1 : maxIter
             l = min(infos{iM}.minVals(1, i-10:i));
             r = max(infos{iM}.maxVals(1, i-10:i));
             dis = max(bestX(1) - l, r - bestX(1)) + 0.001;
-%             set(gca, 'xlim', [bestX(1) - dis, bestX(1) + dis]);
+            set(gca, 'xlim', [bestX(1) - dis, bestX(1) + dis]);
 
             l = min(infos{iM}.minVals(2, i-10:i));
             r = max(infos{iM}.maxVals(2, i-10:i));
             dis = max(bestX(2) - l, r - bestX(2)) + 0.001;
-%             set(gca, 'ylim', [bestX(2) - dis, bestX(2) + dis]);
+            set(gca, 'ylim', [bestX(2) - dis, bestX(2) + dis]);
         end
         
         if infos{iM}.minFVals(i) - minFVal <= optimalFunctionTolerance
@@ -278,7 +278,7 @@ for i = 1 : maxIter
             xlabel('Iterations');
             ylabel('|F-F^*| (log scale)');
             title(sprintf('MinVal Plot | Iter:%d | MinVal:%.4e', i, infos{iM}.minFVals(i)));
-            bsPlotSetDefault(bsGetDefaultPlotSet());
+            bsSetDefaultPlotSet(bsGetDefaultPlotSet());
             set(gca, 'ylim', [-10, 2]);
             set(gca, 'xlim', [1, maxIter]);
         else
@@ -304,6 +304,6 @@ bsSaveFramesToGif(frames, sprintf('./frames/Cmp_%s_%s_%s_%d.gif', testMethods{1,
 % if iter == 1
 %     xlabel('Iteration number');
 %     ylabel('Objective function value');
-%     bsPlotSetDefault(bsGetDefaultPlotSet());
+%     bsSetDefaultPlotSet(bsGetDefaultPlotSet());
 % end
 
