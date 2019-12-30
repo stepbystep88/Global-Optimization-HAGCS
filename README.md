@@ -30,10 +30,10 @@ Set path: addpath(genpath("./WZDOM"));
 > ![alt text](https://github.com/stepbystep88/Global-Optimization-HAGCS/blob/master/frames/Cmp_CS_HAGCS_Schwefel_25.gif)
 
 > Compare `CS` with `HAGCS` on the Schwefel's P2.22 test function:
-> ![alt text](https://github.com/stepbystep88/Global-Optimization-HAGCS/blob/master/frames/Cmp_CS_HAGCS_Schwefel's%20P2.22_25.gif)
+> ![alt text](https://github.com/stepbystep88/Global-Optimization-HAGCS/blob/master/frames/Cmp_CS_HAGCS_Schwefel's%20P2.22_5.gif)
 
 > Compare `CS` with `HAGCS` on the Ackley test function:
-> ![alt text](https://github.com/stepbystep88/Global-Optimization-HAGCS/blob/master/frames/Cmp_CS_HAGCS_Ackley_25.gif)
+> ![alt text](https://github.com/stepbystep88/Global-Optimization-HAGCS/blob/master/frames/Cmp_CS_HAGCS_Ackley_5.gif)
 
 2. To compare the performance of finding global minimum, convergence speed of different algorithms, please run ./test_global_optimization/testCompareMethodsFinal.m
 
