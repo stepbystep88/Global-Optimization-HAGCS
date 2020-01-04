@@ -12,7 +12,7 @@ Set path: addpath(genpath("./WZDOM"));
 
 ## Test
 
-1. View the animation of optimization process (run test_global_optimization/testShowAnimation.m )
+1. View the animation of optimization process (run testShowAnimation.m )
 
 > Compare `CS` with `HAGCS` on the Drop Wave test function:
 > ![alt text](https://github.com/stepbystep88/Global-Optimization-HAGCS/blob/master/frames/Cmp_CS_HAGCS_Drop%20Wave_25.gif)
@@ -35,7 +35,7 @@ Set path: addpath(genpath("./WZDOM"));
 > Compare `CS` with `HAGCS` on the Ackley test function:
 > ![alt text](https://github.com/stepbystep88/Global-Optimization-HAGCS/blob/master/frames/Cmp_CS_HAGCS_Ackley_5.gif)
 
-2. To compare the performance of finding global minimum, convergence speed of different algorithms, please run ./test_global_optimization/testCompareMethodsFinal.m
+2. To compare the performance of finding global minimum, convergence speed of different algorithms, please run testCompareMethodsFinal.m
 
 ## References
 [1] Xin-She Yang and Suash Deb. Cuckoo search via levy flights. In 2009 World Congress on Nature Biologically Inspired Computing (NaBIC), pages 210-214, Dec 2009.
